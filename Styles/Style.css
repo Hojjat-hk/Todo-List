@@ -1,0 +1,322 @@
+/* -- Font CDN -- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700;800;900&display=swap');
+
+/* -- Stylesheet Variables -- */
+:root{
+    --color-gray100:#F2F2F2;
+    --color-gray200:#D9D9D9;
+    --color-gray300:#808080;
+    --color-gray400:#333333;
+    --color-gray500:#262626;
+    --color-gray600:#1A1A1A;
+    --color-gray700:#0D0D0D;
+    --color-purple :#8284FA;
+    --color-blue   :#4EA8DE;
+    --color-danger :#E25858;
+    --color-blueDark:#1E6F9F;
+    --color-purpleDark:#5E60CE;
+}
+
+/* -- For High Performance -- */
+.d-flex{
+    display: flex;
+}
+.jst-cnt-cntr{
+    justify-content: center;
+}
+.alg-itm-cntr{
+    align-items: center;
+}
+button{
+    cursor: pointer;
+}
+button, input{
+    outline: none;
+    border: none;
+}
+
+/* -- For All Element -- */
+*, *::before, *::after{
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* -- Stylesheet -- */
+body{
+    font-family: "Poppins", serif;
+    background-color: var(--color-gray600);
+    z-index: 1;
+    padding-inline: 15px;
+}
+
+/* -- Loading Config -- */
+.loading-section{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: var(--color-gray600);
+    z-index: 1000;
+}
+.loading-item{
+    border: 3px solid;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: loading infinite linear;
+    -webkit-animation: loading infinite linear;
+    -o-animation: loading infinite linear;
+    -moz-animation: loading infinite linear;
+}
+.loading-item:nth-child(1){
+    width: 170px;
+    height: 170px;
+    border-color: var(--color-purpleDark) var(--color-purpleDark) transparent transparent;
+    animation-duration: 1.2s;
+    -webkit-animation-duration: 1.2s;
+}
+.loading-item:nth-child(2){
+    width: 120px;
+    height: 120px;
+    border-color:  transparent transparent var(--color-blueDark) var(--color-blueDark);
+    animation-duration: 0.75s;
+    -webkit-animation-duration: 0.75s;
+}
+.loading-item:nth-child(3){
+    width: 62px;
+    height: 62px;
+    border-color: var(--color-purpleDark) var(--color-purpleDark) transparent transparent;
+    animation-duration: 0.37s;
+    -webkit-animation-duration: 0.37s;
+}
+/* - - - - - - - - -*/
+.shape{
+    z-index: 2;
+    position: absolute;
+    background-color: var(--color-gray700);
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+}
+.container{
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 500px;
+    max-width: 736px;
+    margin: 0 auto;
+}
+.todo-logo{
+    gap: 12px;
+    height: 60px;
+    margin: 72px auto 42px auto;
+}
+.todo-logo > img{
+    position: fixed;
+    display: block;
+    width: 22px;
+    height: 36px;
+    transform: translateX(-70px);
+    animation: rocket 5s linear 1;
+    -webkit-animation: rocket 5s linear 1;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+}
+.todo-logo > h1{
+    color:#1e1e1e;
+    width:max-content;
+    font-size: 40px;
+    transition: all 0.3s ease;
+    animation: rocketTitle 2.5s ease 1;
+    -webkit-animation: rocketTitle 5.5s ease 1;
+    animation-fill-mode: forwards;
+    animation-delay: 5.7s;
+}
+.todo-logo > h1 span:first-child{
+    color: var(--color-blue) !important;
+}
+.todo-logo > h1 span:last-child{
+    color: var(--color-purpleDark) !important;
+}
+.input-container{
+    height:50px;
+    gap: 8px;
+}
+.input-container input, .input-container button{
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+.input-container > input {
+    width: 85%;
+    height: 100%;
+    border: 1px solid var(--color-gray700);
+    background-color: var(--color-gray500);
+    color: var(--color-gray300);
+    font-size: 16px;
+    padding-inline-start: 16px;
+}
+.input-container > input::placeholder{
+    color: var(--color-gray300);
+    font-size: 16px;
+}
+.input-container > button{
+    width: 15%;
+    height: 100%;
+    gap: 8px;
+    background-color: var(--color-blueDark);
+}
+.input-container > button * {
+    font-size: 16px;
+    color: var(--color-gray100);
+}
+.input-container > input:focus{
+    border-color: var(--color-blueDark) !important;
+}
+.input-container > button:hover{
+    background-color: var(--color-purpleDark);
+}
+.task-info{
+    width: 100%;
+    justify-content: space-between;
+    margin-block: 64px 24px;
+}
+.task-info > div{
+    gap: 8px;
+}
+.task-info_text{
+    font-size: 14px;
+    font-weight: bold;
+}
+.task-info > div:first-child > span.task-info_text{
+    color: var(--color-blue);
+}
+.task-info > div:last-child > span.task-info_text{
+    color: var(--color-purple);
+}
+.counter{
+    color: var(--color-gray200);
+    background-color: var(--color-gray400);
+    padding: 2px 8px;
+    border-radius: 100%;
+    font-size: 12px;
+}
+.todos-container{
+    width: 100%;
+    border-top: 1px solid var(--color-gray400);
+    border-radius: 8px;
+    min-height: 244px;
+    gap: 12px;
+}
+.empty{
+    flex-direction: column;
+    gap: 16px;
+}
+.empty-text{
+    font-size: 16px;
+    color: var(--color-gray300);
+    text-align: center;
+    width: max-content;
+}
+.empty-text span:first-child{
+    font-weight: bold;
+}
+.notEmpty{
+    flex-direction: column !important;
+    border: none !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    height: auto !important;
+}
+.notEmpty > .empty{
+    display: none;
+}
+.tasksX{
+    gap:12px;
+    width: 100%;
+}
+.todo{
+    justify-content: space-between;
+    border: 1px solid var(--color-gray400);
+    background-color: var(--color-gray500);
+    width: 100%;
+    padding: 18px 20px;
+    border-radius: 8px;
+}
+.checkbox-label{
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--color-blue);
+    border-radius: 100%;
+    cursor:pointer;
+}
+.checkbox-label > i{
+    visibility: hidden;
+    font-size: 7px;
+    color:#fff;
+}
+.checkbox:checked + label{
+    background-color: var(--color-purpleDark);
+}
+.checkbox:checked + label > i {
+    visibility: visible;
+}
+.todo-value{
+    color: var(--color-gray100);
+    font-size: 14px;
+    font-weight: normal;
+}
+.delete-btn{
+    cursor: pointer;
+}
+/* -- Animation Config -- */
+@keyframes loading{
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+@keyframes rocket {
+    10%{
+        transform: translateY(-30px) translateX(-70px) rotate(20deg);
+    }
+    25%{
+        transform: translateY(-58px) translateX(-50px) rotate(40deg);
+    }
+    50%{
+        transform: translateY(-62px) translateX(-10px) rotate(60deg);
+}
+    75%{
+        transform: translateY(-75px) translateX(20px) rotate(75deg);
+}
+    85%{
+        transform: translateY(-85px) translateX(50px) rotate(90deg);
+}
+    100%{
+        transform: translateY(-80px) translateX(1500px) rotate(90deg);
+}
+}
+@keyframes rocketTitle {
+    100%{
+        transform: translateX(-35px);
+    }
+}
+
+/* -- Responsive Config -- */
+@media only screen and (max-width: 520px){
+    button, img{
+        cursor:none;
+    }
+    .input-container > input{
+        width: 78%;
+    }
+    .input-container > button{
+        width: 22%;
+    }
+}
