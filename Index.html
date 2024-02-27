@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="Styles/Style.css">
+    <title>Real world</title>
+</head>
+<body>
+    <section class="loading-section d-flex jst-cnt-cntr alg-itm-cntr">
+        <span class="loading-item"></span>
+        <span class="loading-item"></span>
+        <span class="loading-item"></span>
+    </section>
+    <div class="shape"></div>
+    <section class="container">
+        <div class="todo-logo d-flex alg-itm-cntr jst-cnt-cntr">
+            <img src="Asset/Picture/rocket.svg" alt="rocket picture" class="rocket">
+            <h1 class="rocketTitle d-flex jst-cnt-cntr alg-itm-cntr"><span>to</span><span>do</span></h1>
+        </div>
+        <div class="input-container d-flex alg-itm-cntr">
+            <input type="text" id="userInputTask" placeholder="Add a new task . ." maxlength="34">
+            <button type="button" id="addTaskBtn" class="d-flex jst-cnt-cntr alg-itm-cntr">
+                <span>Add</span>
+                <i class="fas fa-plus-circle"></i>
+            </button>
+        </div>
+        <div>
+            <div class="task-info d-flex alg-itm-cntr">
+                <div class="created-container d-flex alg-itm-cntr">
+                    <span class="created-text task-info_text">Tasks created</span>
+                    <span id="createdCount" class="counter">0</span>
+                </div>
+                <div class="complete-container d-flex alg-itm-cntr">
+                    <span class="complete-text task-info_text">Completed</span>
+                    <span id="completeCount" class="counter">0</span>
+                </div>
+            </div>
+            <div class="todos-container d-flex jst-cnt-cntr alg-itm-cntr">
+                <div class="empty d-flex alg-itm-cntr">
+                    <img src="Asset/Picture/Clipboard.svg" alt="clipboard picture">
+                    <span class="empty-text">
+                        <span>You don't have tasks registered yet</span>
+                        <br>
+                        <span>Create tasks and organize your to-do items</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="application/javascript" src="Scripts/Script.js" defer></script>
+</body>
+</html>
+
