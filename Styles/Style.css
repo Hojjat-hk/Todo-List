@@ -78,7 +78,7 @@ body{
 .loading-item:nth-child(1){
     width: 170px;
     height: 170px;
-    border-color: var(--color-purpleDark) var(--color-purpleDark) transparent transparent;
+    border-color: var(--color-purpleDark) var(--color-purpleDark) transparent transparent ;
     animation-duration: 1.2s;
     -webkit-animation-duration: 1.2s;
 }
