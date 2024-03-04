@@ -2,7 +2,7 @@
 
 // [+] For High Performance
 const $ = document;
-
+ 
 // [+] Variables
 let loadingSection       = $.querySelector(".loading-section");
 let userInput            = $.querySelector("#userInputTask");
