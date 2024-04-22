@@ -5,7 +5,7 @@ const $ = document;
   
 // [+] Variables
 let loadingSection       = $.querySelector(".loading-section");
-let userInput            = $.querySelector("#userInputTask");
+let userInput            = $.querySelector("#userInputTask"); 
 let createdCounterElem   = $.querySelector("#createdCount");
 let completedCounterElem = $.querySelector("#completeCount");
 let tasks                = $.querySelector(".todos-container");
