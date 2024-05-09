@@ -1,3 +1,4 @@
+"use strict";
 // Hello world! //
 
 // [+] For High Performance
